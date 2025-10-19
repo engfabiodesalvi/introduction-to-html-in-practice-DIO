@@ -68,7 +68,7 @@ A estrutura básica de um documento escrito em **HTML** contém as **tags** deli
     - **class:** Define a classe a que esta tag pertence. A classe representa um conjunto de estilos pré-determinado que pode ser aplicado a mais de um elemento.
 
 
-- **Exemplo:** Texto dentro da seção **\<body\>** com as formatações acima.
+- **Exemplo 1:** Texto dentro da seção **\<body\>** com as formatações acima.
 
     ```html
     <body>
@@ -85,61 +85,192 @@ A estrutura básica de um documento escrito em **HTML** contém as **tags** deli
     </body>
     ```
 
+- **Exemplo 2:** Lista ordenada e lista não ordena com itens e subitens.
+
+    ```html
+    <body>
+        <h2>Minha primeira lista ordenada!</h2>
+        <ol>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li> Item 4
+                <ol>
+                    <li>Item 3.1</li>
+                    <li>Item 3.2</li>
+                    <li>Item 3.3</li>
+                </ol>
+            </li>
+        </ol>
+
+        <h2>Minha primeira lista não ordenada!</h2>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item4
+                <ol>
+                    <li>Item 3.1</li>
+                    <li>Item 3.2</li>
+                    <li>Item 3.3</li>
+                </ol>
+            </li>
+        </ul>        
+    </body>
+    ```
+
 ## Tag para incluir figuras
     
 - **\<img /\>:** Usada para incorporar uma imagem em uma página wen. Utilize os atributos de **img** para definir o diretório da imagem. sua largura, entre outros.
     - **src:** Este é um atributo obrigatório que especifica a URL (Uniform Resource Locator) ou caminho para o arquivo de imagem.
     - **width:** Define a largura da imagem. Poder ser um valor fixo em pixels (**px**) ou um valor percentual referente à largura do conteiner pai desta imagem.    
 
-- **Exemplo:** Incuindo uma imagem dendo da seção **\<body\>**.
+- **Exemplo:** Incluindo uma imagem dendo da seção **\<body\>**.
 
-```html
-<body>
-    <img width="250px" src="./images/image1.png"/>
+    ```html
+    <body>
+        <img width="250px" src="./images/image1.png"/>
 
-    <img width="50%" src="./images/image1.png"/>    
-</body>
-```
+        <img width="50%" src="./images/image1.png"/>    
+    </body>
+    ```
 
-## Tags para incluir dados 
+## Tag para incluir dados 
 
-- **\<input /\>:** Define um campo de formulário interativo que permite ao usuário inserir dados.\
-Os atributos mais importantes são:
+- **\<input\>:** Define um campo de formulário interativo que permite ao usuário inserir dados.\
+A forma como ela é exibida e seu comportamento é determinada pelo atributo `type` e modificada por vários outros atributos:
 
-    - **type:** Específica o tipo de controle.\
-    Podendo ser:
-        - **text:** Campo de texto de liha única.
-        - **password:** Campo de texto que oculta o valor digitado com asteriscos.
-        - **checkbox:** Uma caixa de seleção que pode ser marcada com asteriscos.
-        - **radio:** Um botão de opção, permitindo a seleçã de apenas um item em um grupo.
-        - **submit:** Um botão que enia os dados do formulário.
-        - **button:** Um botão clicável genérico.
-        - **file:** Permite ao usuário selecionar um arquivo para upload.
-        - **date:** Cria um campo de seleção de data.
-        - **email:** Campo para entrada de endereços de e-mail.
-        - **number:** Campo para inserir números.
-        - **url:** Campo para selecionar
-        - **color:** Campo para selecinar uma cor.
-        - **range:** Um controle delizante para inserir um número de um intervalo.
-        - **month:** Permite selecionar um mês e ano.
-       
-    - **name:** Identifica o nome do campo, usado para enviar dados ao servidor.
-    - **id:** Identifica o elemento de forma única na página.
-    - **value:** Define o valor inicial do campo.
-    - **placeholder:** Exibe um texto de exemplo dentro do campo (desaparece quando  usuário digita).
-    - **required:** Indica que o campo deve ser preenchido antes do envio do formulário.
-    - **readonly:** Impede o usuário de modificar o valor do campo.
-    - **disabled:** Desabilita o campo, tornando-o inativo.
-    - **maxlength:** Limita o número máximo de caracteres que podem ser digitados.
-    - **minlength:** Define o número mínimo de caracteres necessários.
-    - **min:** Define o valor mínimo permitido para campos numéricos ou de data.
-    - **max:** Define o valor máximo permitido para campos numéricos ou de data.
-    - **multiple:** Permite a seleção de múltiplos arquivos ou valores (dependendo do tipo do campo).
-    - **autofocus:** Foca automaticamente no campo quando a página carrega.
-    - **pattern:** Define um padrão de expressão regular para validação do valor.
+    - **Atributo principal - `type`:**  Este atributo é o mais importante e define o tipo de controle que o `<input>` irá renderizar (o tipo de entrada) e, consequentemente, o comportamento e os atributos aplicáveis.   
+
+        - **Entrada de texto e variações específicas**
+            - **text:** Campo de texto de liha única.
+            - **password:** Campo de texto que oculta o valor digitado com asteriscos.
+            - **email:** Campo para entrada de endereços de e-mail.
+            - **number:** Campo para inserir números.
+            - **tel:** Um campo para números de telefone.
+            - **url:** Campo para selecionar
+            - **search:** 
+
+        - **Seleção booleana ou exclusiva**      
+            - **checkbox:** Uma caixa de seleção que pode ser marcada com asteriscos.
+            - **radio:** Um botão de opção, permitindo a seleçã de apenas um item em um grupo.
+
+        - **Upload e envio de imagens**
+            - **file:** Permite ao usuário selecionar um arquivo para upload.
+
+        - **Entrada de datas e horários**
+            - **date:** Cria um campo de seleção de data.
+            - **time:** Permite ao usuário selecionar um horário (horas e minutos).
+            - **datetime-local:** Permite ao usuário selecionar data e hora local (sem fuso horário).
+            - **month:** Permite selecionar um mês e ano.
+            - **week:** Permite selecionar uma semana específica do ano.
+
+        - **Seleção de intervalo numérico**
+            - **range:** Um controle delizante para inserir um número de um intervalo.
+
+        - **Seleção de cor**
+            - **color:** Campo para selecinar uma cor.
+
+        - **Valor oculto, enviado com o formulário**
+            - **hidden:** Cria um campo invisível que envia dados ocultos junto com o formulário.
+
+        - **Botões de ação**
+            - **button:** Um botão clicável genérico.
+            - **submit:** Um botão que envia os dados do formulário.
+            - **reset:** Cria um botão que redefine tds os caps do formulário para seus valres iniciais (os definidos no HTML), sem enviar os dados ao servidor.
+            - **image:** Atua como um botão de envio (igual a `submit`), mas exibindo uma imagem clicável. Envia as cordenadas do clique (x, y).           
+    
+    - **Atributos de controle de envio (`form*`)**
+        - **`name`:** Identifica o nome do campo, usado para enviar dados ao servidor (chave usada no envio dos dados).
+        - **`form`:** Associa o campo a um `<form>` específico, mesm fora dele.
+        - **`formaction`:** URL de destino ao enviar (`submit`específico).
+        - **`formactype`:** Define o tipo de codificação dos dados enviados (`multipart/form-data`, etc).
+        - **`formmethod`:** Método HTTP (`get`, `post`).
+        - **`formtarget`:** Alvo do envi (`_blank`, `_self`, etc).
+        - **`formnovalidate`:** Ignora validação ao enviar este campo.
+        - **`value`:** Define o valor inicial (padrão) do campo e tambném o valor enviado (se aplicável).
+        - **`dirname`:** Envia a direção do texto (`ltr`, `rtl`) junto com o valor.
+
+    - **Atributos de validação e restrição de dados**
+        - **`required`:** Um atributo booleano para especifícar preenchido brigatório antes do envio do formulário.
+        - **`pattern`:** Especifica uma expressão regular que o valor do campo deve corresponder para ser considerado válido.          
+        - **`min`:** Define o valor mínimo permitido para campos numéricos ou de data.
+        - **`max`:** Define o valor máximo permitido para campos numéricos ou de data.
+        - **`minlength`:** Define o número mínimo de caracteres necessários.
+        - **`maxlength`:** Limita o número máximo de caracteres que podem ser digitados.
+        - **`step`:** Define o incremento permitido entre valores numéricos.
+        - **`readonly`:** Impede o usuário de modificar o valor do campo, mas permite que o valor seja enviado com o formulário.
+        - **`disabled`:** Desabilita o campo, tornando-o inativo, impedindo que o seu valor seja enviado.        
+        - **`accept`:** Define os tipos de aqrquivos aceitos (`.jpg`, `image/*`, etc).
+        - **`multiple`:** Permite a seleção de múltiplos arquivos ou valores (dependendo do tipo do campo).        
+
+    - **Atributos de comportamento e acessibilidade:**
+        - **`autofocus`:** Foca automaticamente no campo ao carregar a página.
+        - **`autocomplete`:** Ativa/desativa autocompletar (`on`, `off`, `email`, `name`, etc) baseado em dados que o usuário inseriu anteriormente.
+        - **`inputmode`:** Sugere tipo de teclado em dispositivo móveis (`numeric`, `email`, etc).
+        - **`capture`:** Solicita entrada da câmera/microfone (em `file`).
+        - **`placeholder`:** Exibe um texto de exemplo dentro do campo (desaparece quando o usuário digitar algo).
+        - **`tabindex`:** Define rdem de navegação via tecla TAB.        
+        - **`list`:** Permite vincular o campo a um elemento `<datalist>`, oferecendo opções de preenchimento automático.  
+        - **`aria-*`:** Atributos de acessibilidade (ARIA).
+        - **`enterkeyhint`:** Sugere o rótul do botão "Enter" no teclado virtual.
+        - **`tittle`:** Texto exibido como dica ao passar o mouse.
+
+    - **Atributos de aparência e layout`**
+        - **`id`:** Identifica o elemento de forma única no campo, útil para associar com uma `<label>` ou para manipulação com JavaScript.
+        - **`class`:** Define classes CSS para estilização.
+        - **`style`:** Define estilos inline.
+        - **`size`:** Largura do campo em caracteres.
+        - **`width`:** Largura de um campo (para `type="image"`).
+        - **`height`:** Altura de um campo (para `type="image"`).
+        - **`alt`:** Texto alternativo (para `image`).
+        - **`src`:** URL da imagem (para `image`).
+
+    - **Atributos de estado e seleção**
+    (Específicos para botões de opção e caixas de seleção).
+        - **`checked`:** Define se  campo inicia marcado (`checked`, `radio`).
+        - **`value`:** Valor ennviado quando marcado.
+
+    - **Atributos de events (interatividade)
+        - **`oninput`:** Executa código conforme o usuário digita.
+        - **`onchange`:** Executa código quando o valor muda.
+        - **`onclick`:** Ao clicar no campo.
+        - **`onfocus`:** Ao ganhar foco.
+        - **`onblur`:** Ao perder foco.
+
+    - **Observação importante**
+    O comportamento e a relevância de muitos atributos dependem diretamente do valor de `type`.\
+    Por exemplo, `min`e `max` não se aplicam a `text`, mas são excenciais em `number` e `date`.
 
 
     
+
+
+
+
+## Tag âncora (hyperlink)
+
+- **\<a\> e \</a\>:** Define um link que pode nacegar para outra página, seção, arquivo ou ação.\
+É um dos principais elementos de navegação em HTML.
+Seus principais atributos são:
+
+    - **`href`:** Define  destino d link (URL, âncora, e-mail, etc).
+    - **`target`:** Especifica onde abrir  link (`_blank`, `_self`, etc).
+    - **`title`:** Exibe uma dica ao passar o mouse.
+    - **`download`:** Faz o link baixar  arquivo em vez de abri-lo.
+    - **`rel`:** Define a relação entre o document e o link (`noopener`, `nofollow`, etc).
+    - **`type`:** Indica o tipo MIME do recurso (ex: `application/pdf`).
+    - **`hreflang`:** Define o idioma do destino.
+
+- **Exemplo**
+
+    ```html
+    <body>
+        <h1>Sobre meu site</h1>
+        <a href="index.html" title="Página inicial" target="_self">< Voltar</a>
+    </body>
+    ```
+
 # Comandos de produtividade em Visual Studio Code
 
 ## Recursos Úteis 
@@ -147,23 +278,77 @@ Os atributos mais importantes são:
 Alguns recursos de produtividade estão disponíveis em **IDEs** como **VS Code** e visão  auxilizar na inserção e modificação de algumas estrutras da linguagem:
 
 ### Emmet abbreviation (Abreviações Emmet)
+Digite a abreviação desejada e, na sequencia, pressione a tecla `TAB`.
 
-- `HTML:5`: Digite este comando seguido da tecla `TAB` para inserir uma estrutura padrão:
+- `HTML:5`: Insere uma estrutura padrão:
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
-```
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        
+    </body>
+    </html>
+    ```
 
+- `ol>li*3`: Insere uma lista ordenada com três itens.
+    ```html
+    <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+    ```    
+
+- `ol>li{Item $}*3`: Insere uma lista ordenada com três itens, incluindo texto e uma numeração.
+    ```html
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+    ```
+
+- `ul>li*3`: Insere uma lista não-ordenada com três itens.
+    ```html
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    ```    
+- `ul>li{Item $}*3`: Insere uma lista não-ordenada com três itens, incluindo texto e numeração crescente.
+    ```html
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    ```
+
+- `li{Item 4}>ol>li{Item 3.$}*3`: Insere um item com texto definido e uma sub-lista ordenada com text definido e com numeração crescente.
+    ```html
+    <li>Item4
+        <ol>
+            <li>Item 3.1</li>
+            <li>Item 3.2</li>
+            <li>Item 3.3</li>
+        </ol>
+    </li>
+    ```
+
+- `ul>li*2>a`: Insere um lista não-ordenada com dois itens com link a definir.
+    ```html
+    <ul>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+    </ul>
+    ```
 
 ## Slide 
  - [**Introdução ao HTML na Prática.pptx**](https://hermes.dio.me/files/assets/e7860ad4-810b-4ca6-ac00-398ce51f3fad.pptx) - Apresentação utilizada no curso.
