@@ -80,12 +80,13 @@ A estrutura básica de um documento escrito em **HTML** contém as **tags** deli
     - **\<address> e \</address\>:** Indica informações de contato.
 
 - **Atributos para serem utilizados com as tags:** Os atributos são palavras especiais dentro das tags de abertura que fornecem informação a um elemento e modificam o seu comportamento. Alguns atributos aplicáveis às tags de formatação de texto.
+
     - **id:** Define um identificador único para um elemento específico. Auxilia na identificação de um elemento quando se utiliza Javascript.
     - **style:** Define um estilo ão texto, podendo ser uma cor, uma determinada fonte, um determinada tamanho, entre outros, aplicado diretemente a um elemento.
     - **class:** Define a classe a que esta tag pertence. A classe representa um conjunto de estilos pré-determinado que pode ser aplicado a mais de um elemento.
 
 
-- **Exemplo 1:** Texto dentro da seção **\<body\>** com as formatações acima.
+- **Exemplo 1:** Formatação de texto.
 
     ```html
     <body>
@@ -295,11 +296,6 @@ A forma como ela é exibida e seu comportamento é determinada pelo atributo `ty
     - **Observação importante**
     O comportamento e a relevância de muitos atributos dependem diretamente do valor de `type`.\
     Por exemplo, `min`e `max` não se aplicam a `text`, mas são excenciais em `number` e `date`.
-
-
-    
-
-
 
 
 ## Tag âncora (hyperlink)
