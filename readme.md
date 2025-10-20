@@ -37,30 +37,30 @@ A estrutura básica de um documento escrito em **HTML** contém as **tags** deli
     - **CSS (Cascading Style Sheets):** A forma mais flexível e recomendada para estilizar. Você pode aplicar estilos aos elementos `<div>`, `<span>` e outros, e definir o visual sem alterar a estrutura do HTML.
 
 - **Tags de estrutura e organização**
-    - **\<h1\> a \<h6\>:** Definem títulos, do mais importante (`\<h1\>`) ao menos importante (`\<h6\>`).
-        - **\<h1\> \</h1\>:** Deve ser utilizado apenas uma vez por página. Identifica o assunto principal do conteúdo.
-        - **\<h2\> \</h2\>:** Usado para subtítulos que dividem o conteúdo em secções principais. Pode haver múltiplos **\<h2\>** em uma página.
-        - **\<h3\> \</h3\>:** Usado para subseções dentro de uma seção **\<h2\>**.
-        - **\<h4\> \</h4\>:** Usado para subdivisões ainda menores dentro de uma seção **\<h3\>**.
-        - **\<h5\> \</h5\>:** Usado para subdivisões dentro de uma seção **\<h4\>**.
-        - **\<h6\> \</h6\>:** Usado para o nivel mais baixo de cabeçalho, subdividindo secções **\<h5\>**.
-    - **\<p\> \</p\>:** Inclui um parágrafo de texto.    
-    - **\<ul\> \</ul\>:** Usada para criar listas não ordenadas.
-    - **\<ol\> \</ol\>:** Usada para criar listas ordenadas.
-    - **\<li\> \</li\>:**  Usada para criar itens nas listas ordenadas e não ordenadas.
-    - **\<div\> \</div\> :** Cria uma seção de nível de bloco para agrupar utros elementos. É útil para aplicar estilos em um grupo de conteúdo.
+    - **\<h1\> a \<h6\>:** Definem títulos, do mais importante (`<h1>`) ao menos importante (`<h6>`).
+        - **\<h1\> e \</h1\>:** Deve ser utilizado apenas uma vez por página. Identifica o assunto principal do conteúdo.
+        - **\<h2\> e \</h2\>:** Usado para subtítulos que dividem o conteúdo em secções principais. Pode haver múltiplos **\<h2\>** em uma página.
+        - **\<h3\> e \</h3\>:** Usado para subseções dentro de uma seção **\<h2\>**.
+        - **\<h4\> e \</h4\>:** Usado para subdivisões ainda menores dentro de uma seção **\<h3\>**.
+        - **\<h5\> e \</h5\>:** Usado para subdivisões dentro de uma seção **\<h4\>**.
+        - **\<h6\> e \</h6\>:** Usado para o nivel mais baixo de cabeçalho, subdividindo secções **\<h5\>**.
+    - **\<p\> e \</p\>:** Inclui um parágrafo de texto.    
+    - **\<ul\> e \</ul\>:** Usada para criar listas não ordenadas.
+    - **\<ol\> e \</ol\>:** Usada para criar listas ordenadas.
+    - **\<li\> e \</li\>:**  Usada para criar itens nas listas ordenadas e não ordenadas.
+    - **\<div\> e \</div\> :** Cria uma seção de nível de bloco para agrupar utros elementos. É útil para aplicar estilos em um grupo de conteúdo.
     - **\<span\>:** Usada para agrupar elementos inline, como palavras ou frases específicas dentro de um parágrafo, para aplicar estilos pontuais.   
 
 - **Tags de formatação de texto**
-    - **\<b\> \</b\>:** Torna o texto em **negrito** sem dar significado semântico adicional (estílo físico).
-    - **\<strong\> \</strong\>:** Indica que  texto tem forte importância ou ênfase, e é exibido em **negrito** por padrão (estilo semântico).
-    - **\<i\> \</i\>:** Torna o texto em *itálico* (estilo físico).
-    - **\<em\> \</em\>:** Enfatiza o texto, que geralemente é exibido em itálico (estilo semãntico).
-    - **\<u\> \</u\>:** Torna o texto **sublinhado** ou **underline**.
-    - **\<sup\> \</sup\>:** Torna o texto **sobreescrito** ou **superscript**.
-    - **\<sub\> \</sup\>:** Torna o texto **subscrito** ou **subscript**.
-    - **\<small\> \</small\>:** Apresenta o texto em uma fonte menor que o padrão, usado para coisas como direitos autorais.
-    - **\<mark\> \</mark\>:** Destaca o texto, com se ele estivesse marcado com um marca-texto.
+    - **\<b\> e \</b\>:** Torna o texto em **negrito** sem dar significado semântico adicional (estílo físico).
+    - **\<strong\> e \</strong\>:** Indica que  texto tem forte importância ou ênfase, e é exibido em **negrito** por padrão (estilo semântico).
+    - **\<i\> e \</i\>:** Torna o texto em *itálico* (estilo físico).
+    - **\<em\> e \</em\>:** Enfatiza o texto, que geralemente é exibido em itálico (estilo semãntico).
+    - **\<u\> e \</u\>:** Torna o texto **sublinhado** ou **underline**.
+    - **\<sup\> e \</sup\>:** Torna o texto **sobreescrito** ou **superscript**.
+    - **\<sub\> e \</sup\>:** Torna o texto **subscrito** ou **subscript**.
+    - **\<small\> e \</small\>:** Apresenta o texto em uma fonte menor que o padrão, usado para coisas como direitos autorais.
+    - **\<mark\> e \</mark\>:** Destaca o texto, com se ele estivesse marcado com um marca-texto.
 
 - **Atributos para serem utilizados com as tags:** Os atributos são palavras especiais dentro das tags de abertura que fornecem informação a um elemento e modificam o seu comportamento. Alguns atributos aplicáveis às tags de formatação de texto.
     - **id:** Define um identificador único para um elemento específico. Auxilia na identificação de um elemento quando se utiliza Javascript.
