@@ -51,7 +51,7 @@ A estrutura básica de um documento escrito em **HTML** contém as **tags** deli
     - **\<div\> e \</div\> :** Cria uma seção de nível de bloco para agrupar utros elementos. É útil para aplicar estilos em um grupo de conteúdo.
     - **\<span\>:** Usada para agrupar elementos inline, como palavras ou frases específicas dentro de um parágrafo, para aplicar estilos pontuais.   
 
-- **Tags de formatação de texto**
+- **Tags de estilo de texto e aparência**
     - **\<b\> e \</b\>:** Torna o texto em **negrito** sem dar significado semântico adicional (estílo físico).
     - **\<strong\> e \</strong\>:** Indica que  texto tem forte importância ou ênfase, e é exibido em **negrito** por padrão (estilo semântico).
     - **\<i\> e \</i\>:** Torna o texto em *itálico* (estilo físico).
@@ -61,6 +61,23 @@ A estrutura básica de um documento escrito em **HTML** contém as **tags** deli
     - **\<sub\> e \</sup\>:** Torna o texto **subscrito** ou **subscript**.
     - **\<small\> e \</small\>:** Apresenta o texto em uma fonte menor que o padrão, usado para coisas como direitos autorais.
     - **\<mark\> e \</mark\>:** Destaca o texto, com se ele estivesse marcado com um marca-texto.
+    - **\<font\> e \</font\>:** *(obsoleto)* Define cor, tamanho e tipo de fonte diretamente no HTML.
+
+- **Tags de correções e revisões**
+    - **\<del\>:** Indica texto removido (aparece riscado).
+    - **\<ins\>:** Indica texto inserido (aparece sublinhado).
+
+- **Tags de código e entrada de dados**
+    - **\<pre\> e \</pre/>:** Usada para preservar espaços, quebras de linha e formatação original do texto, o que é essencial para exibir códigos, saídas de programas, exemplos literais ou blocos de texto formatados - o mesmo contexto onde usamos `<code>`, `<samp>`, `<kbd>` e `<var>`.
+    - **\<code\> e \</code\>:** Exibe um trecho de código
+    - **\<kbd\> e \</kdb\>:** Representa um tecla pressionada pelo usuário.
+    - **\<var\> e \</var\>:** Indica uma variável.
+    - **\<samp\> e \</samp\>:** Representa uma saída de programa.
+    
+- **Tags de citações e endereços**
+    - **\<blockquote\> e \</blockquote\>:** Define uma citação longa em bloco.
+    - **\<q\> e \</q\>:** Define uma sitação curta dentro de um parágrafo.
+    - **\<address> e \</address\>:** Indica informações de contato.
 
 - **Atributos para serem utilizados com as tags:** Os atributos são palavras especiais dentro das tags de abertura que fornecem informação a um elemento e modificam o seu comportamento. Alguns atributos aplicáveis às tags de formatação de texto.
     - **id:** Define um identificador único para um elemento específico. Auxilia na identificação de um elemento quando se utiliza Javascript.
@@ -81,6 +98,25 @@ A estrutura básica de um documento escrito em **HTML** contém as **tags** deli
         </blockquote>  
 
         <p>Os nossos cursos e programas de formação são criados em conjunto come specialistas das empresas <mark>inovadoras do mundo</mark>.</p>
+
+        <blockquote>O sucesso é a soma de pequenos esforços repetidos dia após dia.</blockquote>
+
+        <p>Como disse o autor: <q>Aprender é evoluir</q>.</p>        
+
+        <address>Autor: Fabio Toledo Bonemer De Salvi - engfabiodesalvi@exemplo.com</address>
+        
+        <!--Obsoleto! Utilizar CSS!-->
+        <font color="blue" size="4" face="Arial">Texto com estilo antigo</font>
+
+        <p>Preço antigo: <del>R$50,00</del></p>
+
+        <p>Preço novo: <ins>R$39,90</ins></p>
+
+        <abbr title="HyperText Markup Language">HTML</abbr>
+
+        <p>Baseado em <cite>Dom Casmurro</cite>, de Machado de Assis.</p>
+
+        <p><dfn>API</dfn> é um conjunto de rotinas que permite a comunicação entre sistemas.</p>
 
     </body>
     ```
@@ -117,6 +153,24 @@ A estrutura básica de um documento escrito em **HTML** contém as **tags** deli
             </li>
         </ul>        
     </body>
+    ```
+- **Exemplo 3:** Códigos e entradas de dados.
+
+    ```html
+    <!--HTML-->
+    <pre><code>
+    <p>Olá, mundo!</p>
+    </code></pre>
+    
+    <!--JavaScript-->
+    <pre><code>
+    console.log("Olá, mundo!");
+    </code></pre>    
+
+    <!--C-->
+    <pre><code>
+    printf("Olá, mundo!\n");
+    </code></pre>
     ```
 
 ## Tag para incluir figuras
