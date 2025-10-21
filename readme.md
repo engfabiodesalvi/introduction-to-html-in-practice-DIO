@@ -18,7 +18,7 @@ A estrutura básica de um documento escrito em **HTML** contém as **tags** deli
 
 - **\<body\> e \</body>:** Seção do documento responsável pela parte visual do documento.
 
-- **Exemplo:** Estrutura básica de um documento escrito em HTML.
+- **Exemplo 1:** Estrutura básica da linguagem HTML.
 
     ```html
     <html>
@@ -28,6 +28,22 @@ A estrutura básica de um documento escrito em **HTML** contém as **tags** deli
         </body>
     </html>
     ```
+
+- **Exemplo 2:** Tags e atributos mínimos para iniciar um documento escrito em HTML.
+
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        
+    </body>
+    </html>
+    ```    
 
 ## Tags e atributos para adição e formatação de textos
 
