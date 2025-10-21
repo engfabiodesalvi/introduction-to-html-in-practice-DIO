@@ -64,28 +64,28 @@ A estrutura básica de um documento escrito em **HTML** contém as **tags** deli
     - **\<ul\> e \</ul\>:** Usada para criar listas não ordenadas.
     - **\<ol\> e \</ol\>:** Usada para criar listas ordenadas.
     - **\<li\> e \</li\>:**  Usada para criar itens nas listas ordenadas e não ordenadas.
-    - **\<div\> e \</div\> :** Cria uma seção de nível de bloco para agrupar utros elementos. É útil para aplicar estilos em um grupo de conteúdo.
+    - **\<div\> e \</div\> :** Cria uma seção de nível de bloco para agrupar outros elementos. É útil para aplicar estilos em um grupo de conteúdo. É um elemento não semântico.
     - **\<span\>:** Usada para agrupar elementos inline, como palavras ou frases específicas dentro de um parágrafo, para aplicar estilos pontuais.   
 
 - **Tags de estilo de texto e aparência**
     - **\<b\> e \</b\>:** Torna o texto em **negrito** sem dar significado semântico adicional (estílo físico).
     - **\<strong\> e \</strong\>:** Indica que  texto tem forte importância ou ênfase, e é exibido em **negrito** por padrão (estilo semântico).
     - **\<i\> e \</i\>:** Torna o texto em *itálico* (estilo físico).
-    - **\<em\> e \</em\>:** Enfatiza o texto, que geralemente é exibido em itálico (estilo semãntico).
+    - **\<em\> e \</em\>:** Enfatiza o texto, que geralmente é exibido em itálico (estilo semântico).
     - **\<u\> e \</u\>:** Torna o texto **sublinhado** ou **underline**.
     - **\<sup\> e \</sup\>:** Torna o texto **sobreescrito** ou **superscript**.
-    - **\<sub\> e \</sup\>:** Torna o texto **subscrito** ou **subscript**.
+    - **\<sub\> e \</sub\>:** Torna o texto **subscrito** ou **subscript**.
     - **\<small\> e \</small\>:** Apresenta o texto em uma fonte menor que o padrão, usado para coisas como direitos autorais.
     - **\<mark\> e \</mark\>:** Destaca o texto, com se ele estivesse marcado com um marca-texto.
     - **\<font\> e \</font\>:** *(obsoleto)* Define cor, tamanho e tipo de fonte diretamente no HTML.
 
 - **Tags de correções e revisões**
-    - **\<del\>:** Indica texto removido (aparece riscado).
-    - **\<ins\>:** Indica texto inserido (aparece sublinhado).
+    - **\<del\> e \</del\>:** Indica texto removido (aparece riscado).
+    - **\<ins\> e \</ins\>:** Indica texto inserido (aparece sublinhado).
 
 - **Tags de código e entrada de dados**
     - **\<pre\> e \</pre/>:** Usada para preservar espaços, quebras de linha e formatação original do texto, o que é essencial para exibir códigos, saídas de programas, exemplos literais ou blocos de texto formatados - o mesmo contexto onde usamos `<code>`, `<samp>`, `<kbd>` e `<var>`.
-    - **\<code\> e \</code\>:** Exibe um trecho de código
+    - **\<code\> e \</code\>:** Exibe um trecho de código.
     - **\<kbd\> e \</kdb\>:** Representa um tecla pressionada pelo usuário.
     - **\<var\> e \</var\>:** Indica uma variável.
     - **\<samp\> e \</samp\>:** Representa uma saída de programa.
@@ -98,7 +98,7 @@ A estrutura básica de um documento escrito em **HTML** contém as **tags** deli
 - **Atributos para serem utilizados com as tags:** Os atributos são palavras especiais dentro das tags de abertura que fornecem informação a um elemento e modificam o seu comportamento. Alguns atributos aplicáveis às tags de formatação de texto.
 
     - **id:** Define um identificador único para um elemento específico. Auxilia na identificação de um elemento quando se utiliza Javascript.
-    - **style:** Define um estilo ão texto, podendo ser uma cor, uma determinada fonte, um determinada tamanho, entre outros, aplicado diretemente a um elemento.
+    - **style:** Define um estilo ao texto, podendo ser uma cor, uma determinada fonte, um determinada tamanho, entre outros, aplicado diretemente a um elemento.
     - **class:** Define a classe a que esta tag pertence. A classe representa um conjunto de estilos pré-determinado que pode ser aplicado a mais de um elemento.
 
 
@@ -106,9 +106,9 @@ A estrutura básica de um documento escrito em **HTML** contém as **tags** deli
 
     ```html
     <body>
-        <h1><strong id="titulo" style="color:blue;" class="titulo-principal">Meu primeiro <i>HTML!</i></strong></body></h1>
+        <h1><strong id="titulo" style="color:blue;" class="titulo-principal">Meu primeiro <i>HTML!</i></strong></h1>
 
-        <h2><strong><u>tecnologia<sup>*</sup></h2>
+        <h2><strong><u>tecnologia<sup>*</sup></u></strong></h2>
 
         <blockquote>
             <i>O jeito DIO._ para você ganhar destaque mais rápido no mercado.</i>
@@ -171,12 +171,13 @@ A estrutura básica de um documento escrito em **HTML** contém as **tags** deli
         </ul>        
     </body>
     ```
+
 - **Exemplo 3:** Códigos e entradas de dados.
 
     ```html
     <!--HTML-->
     <pre><code>
-    <p>Olá, mundo!</p>
+    &lt;p&gt;Olá, mundo!&lt;/p&gt;
     </code></pre>
     
     <!--JavaScript-->
@@ -192,11 +193,28 @@ A estrutura básica de um documento escrito em **HTML** contém as **tags** deli
 
 ## Tag para incluir figuras
     
-- **\<img /\>:** Usada para incorporar uma imagem em uma página wen. Utilize os atributos de **img** para definir o diretório da imagem. sua largura, entre outros.
+- **\<img /\>:** Usada para incorporar uma imagem em uma página web. Utilize os atributos de **img** para definir o diretório da imagem, a largura da imagem, entre outros.
     - **src:** Este é um atributo obrigatório que especifica a URL (Uniform Resource Locator) ou caminho para o arquivo de imagem.
-    - **width:** Define a largura da imagem. Poder ser um valor fixo em pixels (**px**) ou um valor percentual referente à largura do conteiner pai desta imagem.    
+    - **width:** Define a largura da imagem em **pixel** (px) ou em **porcentagem** (%). Não precisa incluir a unidade **px**.
+    - **style:** Utilize a propriedade `width` deste atributo para definir a largura da imagem utilizando a unidade **pixel** (px) e outras unidades, podendo ser:
+        - **Unidades aboslutas:** Essas unidades têm um tamanho fixo e não mudam com base em outros elementos ou no tamanho da tela. São ideais para layouts de impressão, mas podem causar problemas de acessibilidade na web, pois não se adaptam às configurações do usuário.
+            - **px (pixels)** Essas unidades têm um tamanho fixo e não mudam com base em outros elementos ou no tamanho da tela. São ideais para layouts de impressão, mas podem causar problemas de acessibilidade na web, pois não se adaptam às configurações do usuário.
+            - **cm (centímetros), mm (milímetros), in (polegadas):** Usadas principalmente para folhas de estilo de impressão.
+    - **Unidades relativas:** Essas unidades se adaptam com base no elemento pai, no elemento raiz (root) ou na janela de visualização (viewport), sendo a melhor opção para criar designs responsivos.
+        - **Relativas à fonte**
+            - **em:** Relativa ao `font-size` do elemento pai. Se o `font-size` do pai mudar, o tamanho em em também mudará.
+            - **rem:** Relativa ao `font-size` do elemento raiz (`<html>`). Usada para garantir que o escalonamento seja consistente em toda a página, sem o problema de herança aninhada do em.
+            - **ch:** Relativa à largura do caractere "0" (zero) da fonte atual.
 
-- **Exemplo:** Incluindo uma imagem dendo da seção **\<body\>**.
+        - **Relativas à viewport:**
+            - **% (porcentagem):** Relativa à largura do elemento que a contém (elemento pai).
+                - **Exemplo:** `width: 50%;` ocupará metade da largura do elemento pai.
+            - **vw (viewport width):** Relativa a 1% da largura da janela de visualização do navegador. Uma `width: 100vw;` ocupará 100% da largura da tela.
+            - **vh (viewport height):** Relativa a 1% da altura da janela de visualização.
+            - **vmin (viewport minimum):** Relativa a 1% da menor dimensão da janela de visualização (altura ou largura).
+            - **vmax (viewport maximum):** Relativa a 1% da maior dimensão da janela de visualização (altura ou largura).
+
+- **Exemplo:** Incluindo uma imagem dendro da seção **\<body\>**.
 
     ```html
     <body>
@@ -214,13 +232,13 @@ A forma como ela é exibida e seu comportamento é determinada pelo atributo `ty
     - **Atributo principal - `type`:**  Este atributo é o mais importante e define o tipo de controle que o `<input>` irá renderizar (o tipo de entrada) e, consequentemente, o comportamento e os atributos aplicáveis.   
 
         - **Entrada de texto e variações específicas**
-            - **text:** Campo de texto de liha única.
+            - **text:** Campo de texto de linha única.
             - **password:** Campo de texto que oculta o valor digitado com asteriscos.
             - **email:** Campo para entrada de endereços de e-mail.
             - **number:** Campo para inserir números.
             - **tel:** Um campo para números de telefone.
-            - **url:** Campo para selecionar
-            - **search:** 
+            - **url:** Campo para inserir um endereço URL.
+            - **search:** Campo de busca otimizado para a entrada de termos de pesquisa.
 
         - **Seleção booleana ou exclusiva**      
             - **checkbox:** Uma caixa de seleção que pode ser marcada com asteriscos.
@@ -249,15 +267,95 @@ A forma como ela é exibida e seu comportamento é determinada pelo atributo `ty
             - **button:** Um botão clicável genérico.
             - **submit:** Um botão que envia os dados do formulário.
             - **reset:** Cria um botão que redefine tds os caps do formulário para seus valres iniciais (os definidos no HTML), sem enviar os dados ao servidor.
-            - **image:** Atua como um botão de envio (igual a `submit`), mas exibindo uma imagem clicável. Envia as cordenadas do clique (x, y).           
+            - **image:** Atua como um botão de envio (igual a `submit`), mas exibindo uma imagem clicável. As cordenadas do clique (x, y) são enviadas.           
     
     - **Atributos de controle de envio (`form*`)**
         - **`name`:** Identifica o nome do campo, usado para enviar dados ao servidor (chave usada no envio dos dados).
-        - **`form`:** Associa o campo a um `<form>` específico, mesm fora dele.
-        - **`formaction`:** URL de destino ao enviar (`submit`específico).
-        - **`formactype`:** Define o tipo de codificação dos dados enviados (`multipart/form-data`, etc).
-        - **`formmethod`:** Método HTTP (`get`, `post`).
-        - **`formtarget`:** Alvo do envi (`_blank`, `_self`, etc).
+            - **Exemplo**
+                ```html
+                <input type="radio" name="genero" value="masculino"> Masculino
+                <input type="radio" name="genero" value="feminino"> Feminino
+                ```
+        - **`form`:** Associa um campo de entrada de dados `input` a um `<form>` específico, mesmo que este campo esteja localizado em qualquer outra parte do documento HTML e não dentro da tag.
+            - **Exemplo**
+                ```html
+                <!-- O formulário com o ID "contato" -->
+                <form id="contato" action="/enviar-dados" method="post">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome">
+                    <br>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email">
+                </form>
+
+                <!-- O botão de envio fora da tag <form>, mas associado a ela pelo atributo 'form' -->
+                <p>
+                    Clique no botão para enviar o formulário.
+                    <input type="submit" value="Enviar" form="contato">
+                </p>                
+                ```
+        - **`formaction`:** URL de destino dos dados ao enviar (`submit`específico).\
+        Ele substitui o atributo `action` da tag `<form>` para o botão `submit` (ou `image`) em que é usado.\
+        Isso permite que um formulário tenha vários botões de envi, cada um enviando os dados para um destin diferente.
+            - **Exemplo**
+                ```html
+                    <form action="/salvar-dados.php">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome">
+                        <br><br>
+
+                        <input type="submit" value="Salvar no banco de dados">
+
+                        <input type="submit" formaction="/enviar-por-email.php" value="Enviar por e-mail">
+                    </form>                
+                ```
+        - **`formactype`:** Define o tipo de codificação dos dados enviados ao servidor.\
+        Funciona apenas em elementos `<input>` com `type="submit"` ou `type="image"`e sobrescreve o atributo `enctype` definido na tag `<form>` principal.
+            - **`application/x-www-form-urlencoded`:** É o valor padrão. Codifica todos os caracteres antes de enviá-los, convertendo espaços em `+` e caracteres especiais em seus valores hexadecimais.
+            - **`multipart/form-data`:** Usado para enviar dados de formulários que contêm arquivos, como imagens e documentos. Ele não codifica os caracteres. É obrigatório para o envio de arquivos.
+            - **`text/plain`:** Converte espaços em `+`, mas não codifica os caracteres especiais.
+            - **Exemplo**
+                ```html
+                <form action="/destino.php" method="post">
+                    <label for="fname">Primeiro nome:</label>
+                    <input type="text" id="fname" name="fname"><br><br>
+                    
+                    <label for="arquivo">Anexar arquivo:</label>
+                    <input type="file" id="arquivo" name="arquivo"><br><br>
+                    
+                    <!-- Botão de envio padrão -->
+                    <input type="submit" value="Enviar Dados">
+                    
+                    <!-- Botão de envio que sobrescreve o enctype do formulário para upload -->
+                    <input type="submit" formenctype="multipart/form-data" value="Enviar com arquivo">
+                </form>             
+                ```
+        - **`formmethod`:** Usado para substituir o método HTTP especificado no atributo `method` da tag `<form>` à qual ele pertence.
+            - **`get`:** Envia os dados do formulário como pares de nome/valor na URL.
+                - Os dados ficam visíveis na barra de endereço do navegador.
+                - É menos seguro e tem um limite de quantidade de dados a serem enviados.
+                - É mais adequado para consultas de busca e dados não sensíveis.
+            - **`post`:** Envia os dados do formulário dentro do corpo da solicitação HTTP.
+                - Os dados não ficam visíveis na URL.
+                - É mais seguro e não tem limitações de quantidade de dados.
+                - É o método preferido para enviar dados sensíveis, como senhas.
+            - **Exemplo**
+                ```html
+                <form action="/action_page.php" method="post">
+                    Primeiro nome: <input type="text" name="fname"><br>
+                    Último nome: <input type="text" name="lname"><br>
+                    <button type="submit">Enviar com POST (método padrão)</button>
+                    <button type="submit" formmethod="get">Pesquisar (com GET)</button>
+                </form>            
+                ```
+        - **`formtarget`:** Usado para especificar onde a resposta do servidr, após a submissão de um formulário, deverá ser exibida.\
+        Funciona com uma substituição local para o atributo `target` da tag `<form>` à qual o input pertence.\
+        Aplicável apenas a inputs com o `type` igual a `submit` (botão de envio) ou `image` (botão de imagem).
+            - **`_self` (valor padrão):** Abre a resposta na mesma janela ou na aba em que o formulário foi enviado.
+            - **`_blank`:** Abre a resposta em uma nova janela ou aba do navegador.
+            - **`_parent`:** Exibe a resposta no frame pai d frame atual.
+            - **`_top`:** Abre a resposta no corp da janela do navegador, cancelando qualquer estrutura de frames que possa existir.
+            - **`framename`:** Exibe a resposta em um `<iframe>` (ou frame) específico, nomeado com esse valor.
         - **`formnovalidate`:** Ignora validação ao enviar este campo.
         - **`value`:** Define o valor inicial (padrão) do campo e tambném o valor enviado (se aplicável).
         - **`dirname`:** Envia a direção do texto (`ltr`, `rtl`) junto com o valor.
@@ -275,7 +373,7 @@ A forma como ela é exibida e seu comportamento é determinada pelo atributo `ty
         - **`accept`:** Define os tipos de aqrquivos aceitos (`.jpg`, `image/*`, etc).
         - **`multiple`:** Permite a seleção de múltiplos arquivos ou valores (dependendo do tipo do campo).        
 
-    - **Atributos de comportamento e acessibilidade:**
+    - **Atributos de comportamento e acessibilidade**
         - **`autofocus`:** Foca automaticamente no campo ao carregar a página.
         - **`autocomplete`:** Ativa/desativa autocompletar (`on`, `off`, `email`, `name`, etc) baseado em dados que o usuário inseriu anteriormente.
         - **`inputmode`:** Sugere tipo de teclado em dispositivo móveis (`numeric`, `email`, etc).
@@ -287,7 +385,7 @@ A forma como ela é exibida e seu comportamento é determinada pelo atributo `ty
         - **`enterkeyhint`:** Sugere o rótul do botão "Enter" no teclado virtual.
         - **`tittle`:** Texto exibido como dica ao passar o mouse.
 
-    - **Atributos de aparência e layout`**
+    - **Atributos de aparência e layout**
         - **`id`:** Identifica o elemento de forma única no campo, útil para associar com uma `<label>` ou para manipulação com JavaScript.
         - **`class`:** Define classes CSS para estilização.
         - **`style`:** Define estilos inline.
@@ -321,9 +419,9 @@ A forma como ela é exibida e seu comportamento é determinada pelo atributo `ty
 Seus principais atributos são:
 
     - **`href`:** Define  destino d link (URL, âncora, e-mail, etc).
-    - **`target`:** Especifica onde abrir  link (`_blank`, `_self`, etc).
+    - **`target`:** Especifica onde abrir o link (`_blank`, `_self`, etc).
     - **`title`:** Exibe uma dica ao passar o mouse.
-    - **`download`:** Faz o link baixar  arquivo em vez de abri-lo.
+    - **`download`:** Faz o link baixar o arquivo em vez de abri-lo.
     - **`rel`:** Define a relação entre o document e o link (`noopener`, `nofollow`, etc).
     - **`type`:** Indica o tipo MIME do recurso (ex: `application/pdf`).
     - **`hreflang`:** Define o idioma do destino.
@@ -332,7 +430,7 @@ Seus principais atributos são:
 
     ```html
     <body>
-        <h1>Sobre meu site</h1>
+        <h1>Sobre o meu site</h1>
         <a href="index.html" title="Página inicial" target="_self">< Voltar</a>
     </body>
     ```
