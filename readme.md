@@ -383,7 +383,7 @@ A forma como ela é exibida e seu comportamento é determinada pelo atributo `ty
         - **`list`:** Permite vincular o campo a um elemento `<datalist>`, oferecendo opções de preenchimento automático.  
         - **`aria-*`:** Atributos de acessibilidade (ARIA).
         - **`enterkeyhint`:** Sugere o rótul do botão "Enter" no teclado virtual.
-        - **`tittle`:** Texto exibido como dica ao passar o mouse.
+        - **`title`:** Texto exibido como dica ao passar o mouse.
 
     - **Atributos de aparência e layout**
         - **`id`:** Identifica o elemento de forma única no campo, útil para associar com uma `<label>` ou para manipulação com JavaScript.
