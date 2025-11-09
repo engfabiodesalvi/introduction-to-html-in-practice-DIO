@@ -414,7 +414,7 @@ A forma como ela é exibida e seu comportamento é determinada pelo atributo `ty
 
 ## Tag âncora (hyperlink)
 
-- **\<a\> e \</a\>:** Define um link que pode nacegar para outra página, seção, arquivo ou ação.\
+- **\<a\> e \</a\>:** Define um link que pode navegar para outra página, seção, arquivo ou ação.\
 É um dos principais elementos de navegação em HTML.
 Seus principais atributos são:
 
